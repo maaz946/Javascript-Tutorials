@@ -1,0 +1,567 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Video 1 Basics of Javascript</h1>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut numquam laudantium minus nihil neque fuga asperiores omnis, inventore incidunt assumenda sequi, quis explicabo, architecto fugiat. Blanditiis rem sit culpa sint.</p>
+    <script>
+        console.log("Hello World");
+        // var , let, const
+        // var name = "Rahul";
+        // console.log(name);
+
+        let name = "Rahul Kumar";
+        console.log(name);
+
+        // const name = "Rahul Kumar";
+        // console.log(name);
+
+        {
+            let name = "Rahul Kumar";
+            console.log(name);
+        }
+        // let name = "Rahul Kumar";
+        //     console.log(name);
+
+        let a =10;
+        let b=20;
+        let z='20';
+
+        //Arithmetic Operators
+
+        // + , - , * , / , % , ** ;
+        console.log(a+b);
+        console.log(a-b);
+        console.log(a*b);
+        console.log(a/b);
+        console.log(a%b);
+        console.log(a**b);
+        
+        // Comparison Operators
+        // == , === , != , !== , > , < , >= , <=
+        
+        console.log(a==b);
+        console.log(a===b);
+        console.log(a!=b);
+
+        console.log(a!==b);
+
+        console.log(a>b);
+        console.log(a<b);
+        console.log(a>=b);
+        console.log(a<=b);
+
+        // Logical Operators
+        // && , || , !
+
+        console.log(a==b && a<b);   //false
+        console.log(a==b || a<b);  //true
+        console.log(!(a==b)); //true
+
+        // Assignment Operators
+        // = , += , -= , *= , /= , %= , **= , <<= , >>= , >>>= , &= , ^= , |=
+
+        let c = 10;
+        c += 10;
+        console.log(c);
+
+        c -= 10;
+        console.log(c);
+
+        c *= 10;
+        console.log(c);
+
+        c /= 10;
+        console.log(c);
+
+        c %= 10;
+        console.log(c);
+
+        c **= 10;
+        console.log(c);
+
+        // Bitwise Operators
+        // & , | , ^ , ~ , << , >> , >>>
+
+        // Data Types
+        // Primitive Data Types
+        // 1. String 
+        // 2. Number 1234
+        // 3. Boolean (true , false)
+        // 4. Null  (null)
+        // 5. Undefined  (undefined)
+        // 6. Objects (Array , Object , Function)
+
+
+        //string
+
+        // substring
+        // slice
+        // substr
+        // replace
+        // toUpperCase
+        // toLowerCase
+        // trim
+        // charAt
+        // charCodeAt
+        // concat
+        // includes
+        // split
+
+        let str = "    Hello World , I am Maaz warsi      ";
+        
+        let slice=str.slice(0,7);
+        console.log(slice);
+
+        console.log(str.substring(0,7));
+
+        console.log(str.toUpperCase());
+
+        console.log(str.toLowerCase());
+
+        console.log(str.replace('warsi','khan'));
+
+        console.log(str.trim());
+
+        console.log(str.charAt(8));
+
+        console.log(str.charCodeAt(8));
+
+        let str2='ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+
+        let tr= (str.concat(str2));
+        console.log(tr.trim());
+
+        console.log(str.includes('Maaz'));
+
+        console.log(str.split(' '));
+
+        // Number
+
+        // toFixed
+        // toPrecision
+        // toString
+        // valueOf
+
+        let num = 123.456789;
+
+        console.log(num.toFixed(2));
+
+        console.log(num.toPrecision(2));
+
+        console.log(num.toString());
+
+        console.log(num.valueOf());
+
+        // Array and Objects
+
+        let employee={
+            name:'maaz',
+            age:20,
+            salary:10000,
+            address:{
+                city:{town:"DHA",country:"Pakistan"},
+                state:'Karachi',
+                pincode:11061
+            },
+
+        }
+
+        console.log(employee.name);
+        console.log(employee.age);
+        console.log(employee.salary);
+        console.log(employee.address.city.town);
+
+        // Array
+
+        let arr = [1,2,3,4,5,6,7,8,9,10];
+        let arr2=[1,'maaz',true,undefined,null,employee];
+
+        console.log(arr2[4]);
+
+        // Array Methods
+
+        // push
+        // pop
+        // shift
+        // unshift
+        // splice
+        // slice
+        // concat
+        // join
+        // indexOf
+        // lastIndexOf
+
+        arr.push(21);
+        console.log(arr);
+
+        arr.pop();
+        arr.pop()
+        console.log(arr);
+
+        arr.shift();
+        console.log(arr);
+
+        arr.unshift(1);
+        console.log(arr);
+
+        arr.splice(1,2);
+        console.log(arr);
+
+        arr.splice(1,2,3,4,5);
+        console.log(arr);
+
+        //join
+        
+
+        console.log(arr.join(' '));
+
+        // date
+
+        let date = new Date();
+        console.log(date);
+
+        let month=date.getMonth();
+        console.log(month);
+        let day=date.getDay();
+        console.log(day);
+
+//         let year,month1,day1,hours= new Date(year,month,day,hours);
+//         console.log(hours);
+// //         new Date()
+//      new Date(date string)
+
+// new Date(year,month)
+// new Date(year,month,day)
+// new Date(year,month,day,hours)
+// new Date(year,month,day,hours,minutes)
+// new Date(year,month,day,hours,minutes,seconds)
+// new Date(year,month,day,hours,minutes,seconds,ms)
+
+// new Date(milliseconds)
+
+// if and else
+
+let age=-15
+;
+
+if (age>18) {
+    console.log("You are eligible for voting");
+}
+else if(age<16){
+    console.log("not eligible for drinks");
+}
+else{
+    console.log("not eligible for voting and as well as for drinks");
+
+}
+
+// switch case
+
+let day1 = 8;
+
+switch (day1) {
+    case 1:
+        console.log("Monday");
+        break;
+    case 2:
+        console.log("Tuesday");
+        break;
+    case 3:
+        console.log("Wednesday");
+        break;
+    case 4:
+        console.log("Thursday");
+        break;
+    case 5:
+        console.log("Friday");
+        break;
+    case 6:
+        console.log("Saturday");
+        break;
+    case 7:
+        console.log("Sunday");
+        break;
+    default:
+        console.log("Invalid Day");
+        break;
+}
+
+// for loop
+
+// for (let i = 0; i < 10; i++) {
+//     console.log(i);
+//}
+for (let z=0; z<=10; z++) {  
+    console.log(z);}
+
+let arr3=['maaz','saad','ali','khan','warsi'];
+
+console.log(arr3.length)
+
+for (let i =0 ; i<arr3.length ; i++){
+    console.log(arr3[i]);
+}
+
+//forEach is used to print the value of the variable and index of the variable
+console.log("forEach");
+arr3.forEach(function(value,index){ 
+    console.log(value,index);
+});
+
+//for of loop is used to print the value of the variable
+
+for(i of arr3){  
+    console.log(i);
+}
+
+// while loop
+
+let q=0;
+while( q<=10){
+    console.log(q);
+    q++;
+}
+
+//do while loop
+let j=0;
+do{
+    console.log(j);
+    j++;
+}while(j<=10);
+//do while loop is used to print the value of the variable and it will print the value of the variable atleast once
+
+
+// functions
+
+function qwer(name){
+    console.log( name);
+}
+console.log(qwer("maaz"));
+
+function add(a,b){
+    return a+b;
+}
+console.log(add(2,3));
+
+
+// DOM
+
+//previoussibling and nextsibling                  is used to print the previous and next element of the variable
+//nextsibling
+//parentnode                               is used to print the parent element of the variable
+//firstchild and lastchild                 is used to print the first and last element of the variable
+//childnode                              is used to print the child element of the variable
+//firstchild
+//lastchild
+//firstelementchild  
+//lastelementchild
+//nextelementchild
+//prevelementchild
+//parentelement                         is used to print the parent element of the variable
+//children 
+//childelementcount
+//haschildnodes
+//nodevalue                           is used to print the value of the variable
+//nodename                          is used to print the name of the variable
+//nodeType                        is used to print the type of the variable
+//textContent                    is used to print the text of the variable
+//innerHTML                   is used to print the inner text of the variable
+//innerText                is used to print the inner text of the variable
+//outerHTML             is used to print the outer text of the variable
+//outerText         is used to print the outer text of the variable
+//attributes      is used to print the attributes of the variable
+//getAttribute        is used to print the attribute of the variable
+//setAttribute        is used to set the attribute of the variable
+//removeAttribute      is used to remove the attribute of the variable
+//hasAttribute         is used to check the attribute of the variable
+//classList            is used to print the class of the variable
+//className            is used to print the class of the variable 
+
+let aa = document;
+console.log(aa);
+
+let bb = document.all;
+console.log(bb);
+
+let cc = document.body;
+console.log(cc);
+
+let dd = document.forms;
+console.log(dd);
+
+let ee = document.links;
+console.log(ee);
+
+let ff = document.images;
+console.log(ff);
+
+let gg = document.scripts;
+console.log(gg);
+
+let hh = document.domain;
+console.log(hh);
+
+let ii = document.URL;
+console.log(ii);
+
+let jj = document.characterSet;
+console.log(jj);
+
+let kk = document.contentType;
+console.log(kk);
+
+let ll = document.doctype;
+console.log(ll);
+
+let mm = document.head;
+console.log(mm);
+
+let nn = document.title;
+console.log(nn);
+
+let oo = document.styleSheets;
+console.log(oo);
+
+let pp = document.anchors;
+console.log(pp);
+
+let qq = document.cookie;
+console.log(qq);
+
+let rr = document.location;
+console.log(rr);
+
+let ss =document.parentElement;
+console.log(ss);
+
+let tt = document.previousSibling;
+console.log(tt);
+
+let uu = document.nextSibling;
+console.log(uu);
+
+let vv = document.parentNode;
+console.log(vv);
+
+let ww = document.firstChild;
+console.log(ww);
+
+let xx = document.lastChild;
+console.log(xx);
+
+let yy = document.firstElementChild;
+console.log(yy);
+
+let zz = document.lastElementChild;
+console.log(zz);
+
+let aaa = document.nextElementSibling;
+console.log(aaa);
+
+let bbb = document.previousElementSibling;
+console.log(bbb);
+
+let ccc = document.parentElement;
+console.log(ccc);
+
+let ddd = document.children;
+console.log(ddd);
+
+let eee = document.childElementCount;
+console.log(eee);
+
+let fff = document.hasChildNodes();
+console.log(fff);
+
+let ggg = document.nodeValue;
+console.log(ggg);
+
+let hhh = document.nodeName;
+console.log(hhh);
+
+let iii = document.nodeType;
+console.log(iii);
+
+let jjj = document.textContent;
+console.log(jjj);
+
+let kkk = document.getElementById('idone');
+console.log(tt);
+
+let lll = document.getElementsByClassName('classone');
+console.log(tt);
+
+let mmm= document.getElementsByTagName('p');
+console.log(mmm);
+
+let nnn = document.querySelector('.classone');
+console.log(nnn);
+
+let ooo = document.querySelectorAll('.classone');
+console.log(ooo);
+
+let ppp = document.anchors;
+console.log(ppp);
+
+
+
+
+
+// asyncronous javascript
+
+// setTimeout
+
+// setTimeout(function(){
+//     console.log("hello");
+// },2000);
+
+// setInterval
+
+// let i=0;
+
+// setInterval(function(){
+//     console.log(i);
+//     i++;
+// },1000);
+
+// callback function
+
+// function qwer(name){
+//     console.log("hello");
+//     name();
+// }
+
+// qwer(function(){
+//     console.log("maaz");
+// });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+</body>
+</html>

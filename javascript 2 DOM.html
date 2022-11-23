@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Manipulation</title>
+    <style>
+        #container{
+            width: 200px;
+            height: 200px;
+            background-color: #000;
+            margin-top: 2rem;
+        }
+    </style>
+</head>
+
+<body id="body" class="page main">
+
+    <div id="firstDiv" class="allDivs"> First Div</div> 
+
+    <div id="element" class="allDivs"> Second Div</div>
+    <table>
+        <tr>
+            <td>One</td>
+            <td>Two</td>
+        </tr>
+        <tr>
+            <td>Three</td>
+            <td>Four</td>
+        </tr>
+    </table>
+    <button id="clickBtn">Click Me</button>
+
+    <h1 id="title">dom session</h1>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Error ratione necessitatibus ad aliquid! Exercitationem in voluptatem cupiditate facilis quam earum quaerat esse? Omnis, doloremque aperiam. Autem labore dolores atque tempore.</p>
+    <form action="">
+        <input type="text" name="name" id="name">
+        <input type="email" name="email" id="email">
+    </form>
+    <ul>
+        <li class="list-items">name</li>
+        <li class="list-items">age</li>
+
+        <li class="list-items">email</li>
+        
+        <li class="list-items">phone</li>
+    </ul>
+    <button id="but">readmore</button>
+    
+    <dat>
+
+    </dat>
+
+    <div id="container">
+
+    </div>
+    <select >
+        <option value="1">one</option>
+        <option value="2">two</option>
+        <option value="3">three</option>
+    </select>
+    <script>
+        // Root Node
+        // console.log(document)
+        // console.log(document.body)
+        // console.log(document.head)
+
+        // Childrens
+        // console.log(document.body.childNodes[3])
+        // console.log(document.body.children)
+        // for (node of document.body.children) {
+        //     console.log(document.body.children)
+        // }
+        // console.log(document.body.firstChild)
+        // console.log(document.body.lastChild)
+        // console.log(document.body.firstElementChild)
+        // console.log(document.body.lastElementChild)
+        
+        // const childrensOfBody = Array.from(document.body.children)
+        // console.log(childrensOfBody)
+        
+        // childrensOfBody.forEach((child) => {
+        //     console.log(child)
+        // })
+
+        // Siblings
+        // const ulTag = document.body.children[8]
+        // const firstLi = ulTag.children[0]
+        // const secondLi = ulTag.children[7]
+        // console.log(ulTag.previousElementSibling)
+
+        // Table DOM Manipulation
+        // const tableTag = document.body.children[2]
+        // console.log(tableTag.tBodies[0].rows[0].cells[1].style = "background-color:blue;")
+        // console.log(tableTag.tBodies[0].rows[1].cells[1].style="background-color:red;")
+
+        // ID search
+
+        //element.style.background = "red"
+
+        // const ulTag = document.getElementById("element")
+        // ulTag.style.backgroundColor = "red"
+
+        // listItem = document.getElementsByClassName("list-item")
+        // console.log(document.getElementsByTagName("table"))
+
+        // const listItems = document.querySelectorAll('ul > li:nth-child(2)')
+        // console.log(listItems[0].textContent)
+        // console.log(listItem)
+
+        // Attributes
+        // console.log(element.getAttribute('data'))
+        // console.log(element.setAttribute('order-placed', 'pending'))
+        // console.log(element.removeAttribute('order-placed'))
+        // console.log(element.hasAttribute('order-placed'))
+        // console.log(element.attributes)
+
+        // Creating and Removing the node elements
+        const newDiv = document.createElement('div')
+
+        newDiv.innerHTML = `<ul id="element" data="valid">
+        <li class="list-item">First element</li>
+        <li class="list-item">Second element</li>
+        <li class="list-item">Third Element</li>
+    </ul>`
+        // const newText = document.createTextNode('Namaste World')
+        // newDiv.appendChild(newText)
+        // body.append(newDiv)
+       //  body.prepend(newDiv)
+       //  body.before(newDiv)
+        // body.after(newDiv)
+        // document.body.children[8].before(newDiv)
+         // firstDiv.replaceWith(newDiv)
+        // firstDiv.remove()
+
+        // Manipulating Classes
+        body.className = "second page"
+        body.classList.add('new')
+        body.classList.remove('new')
+        body.classList.toggle('new')
+        console.log(body.classList)
+        
+
+        // Mainipulating Style
+        // body.style.color= "red"
+        // body.style['background-color']= "orange"
+        // body.style.margin= "200px"
+
+        // Events
+        function callMe(event){
+            console.log(event.type)
+            console.log(event.currentTarget)
+            console.log(event.clientY)
+            console.log(event.clientX)
+            alert("Thanks for Watching")
+        }
+        // clickBtn.onclick = callMe
+
+        clickBtn.addEventListener('click', callMe)
+
+        // clickBtn.addEventListener('click', function(){
+        //     alert("Thanks")
+        // })
+        // clickBtn.removeEventListener('click',callMe)
+        // clickBtn.removeEventListener('click', function(){
+        //     alert("Thanks")
+        // })
+
+
+
+
+
+
+        // function myfunction(e){
+        //     var title=document.getElementById("title")
+        //     title.innerHTML=e.shiftKey;
+        //     console.log(e)
+        //     }
+            
+            //e.type
+            //e.target
+            //e.clientX is used to get the x axis of the mouse
+            //e.clientY is used to get the position of the mouse
+            //e.offsetX is the distance from the left side of the element
+            //e.shiftKey is used to check if the shift key is pressed or not
+            //e.altKey is used to check if the alt key is pressed or not
+
+
+            //mouse events
+            //click
+            //dblclick
+            //mousedown is used to check if the mouse is pressed or not we can use it to drag and drop
+            
+            //mouseup
+            //mouseenter
+            //mouseleave
+
+            // var container=document.getElementById("container")   
+            // container.addEventListener("mousedown",myfunction)
+
+            // function myfunction(e){
+            // console.log(e.type)
+            // }
+
+             //EVENTS LISTNER
+
+         var button=document.getElementById("but") 
+
+        //     button.addEventListener("click",function(){
+
+        //         var p=document.querySelector("p")
+        //         p.style.color="red"
+        //     })
+
+        //     //second method
+            // button.addEventListener("click",myfunction())
+
+            // function myfunction(){
+            //     var p=document.querySelector("p")
+            //     p.style.display="block"
+            // }
+
+        //     //when we have class which have many elements
+
+            // button.addEventListener("click",function(){
+            //     var listitems=document.getElementsByClassName("list-items")
+                
+            //     for(var i=0;i<listitems.length;i++){
+            //         listitems[i].style.backgroundColor="red"
+                   
+            //         listitems[i].style.margin="10px"
+
+            //         listitems[i].innerHTML='hello'
+            //     }
+            // })
+
+        //EVENT argument are used to get the value of the event which is happening on the page 
+        // e or event
+        // e is object and has many properties
+
+        //  var button=document.querySelector("button")    
+        // button.addEventListener("click",myfunction())
+        //     function myfunction(){
+        //         console.log(event)
+        //     }
+
+
+        //input events
+            //input
+            //change is used to check if the value of the input is changed or not
+
+            //keyup is used to check if the key is pressed or not
+            //keydown is used to check if the key is pressed or not
+
+            // var input=document.querySelector("input[type='text']")
+
+            // console.log(input)
+            // input.addEventListener("keydown",myfunction)
+
+            // function myfunction(e){
+            //     console.log(e.type)
+            //     var p=document.querySelector("p")
+            //     p.innerHTML=e.target.value
+            //     console.log(e.target.value)
+            // }
+
+            //focus is used to check if the input is focused or not
+            //blur is used to check if the input is focused or not or when we click outside the input
+            
+            var input=document.querySelector("input[type='text']")
+            console.log(input)
+            input.addEventListener("focus",myfunction)
+            
+            function myfunction(e){
+                console.log(e.type)
+                var p=document.querySelector("p")
+                p.innerHTML=e.target.value
+                console.log(e.target.value)
+            }
+
+// js callbacks
+// Functions running in parallel with other functions are called asynchronous
+
+function myDisplayer(some) {
+  document.getElementById("demo").innerHTML = some;
+}
+
+function myCalculator(num1, num2, myCallback) {
+  let sum = num1 + num2;
+  myCallback(sum);
+}
+
+myCalculator(5, 5, myDisplayer)
+
+// In the example above, myDisplayer is a called a callback function.
+
+// It is passed to myCalculator() as an argument.
+
+// Create an Array
+const myNumbers = [4, 1, -20, -7, 5, 9, -6];
+
+// Call removeNeg with a callback
+const posNumbers = removeNeg(myNumbers, (x) => x >= 0);
+
+// Display Result
+document.getElementById("demo").innerHTML = posNumbers;
+
+// Keep only positive numbers
+function removeNeg(numbers, callback) {
+  const myArray = [];
+  for (const x of numbers) {
+    if (callback(x)) {
+      myArray.push(x);
+    }
+  }
+  return myArray;
+}
+
+
+
+
+
+
+
+
+
+    </script>
+
+<script>
+    // const allDivs  = document.querySelectorAll(".allDivs")
+    // console.log(allDivs)
+</script>
+</body>
+
+</html>
