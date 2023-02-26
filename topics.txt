@@ -1,0 +1,55 @@
+######## Basics Javascript 1
+print
+variables
+print with variables
+data types
+string / numbers / object(dictnaroy) / Bool
+operators
+logical operators
+about strings
+about arrays
+Date
+if-else
+functions
+loops
+
+
+## DOM BOM  Javascript 2
+
+getelementbyid          
+getelementbyclass
+querySelector
+createElement
+createTextNode
+remove
+removechild
+replacechild
+previousSiblings
+nextSiblings
+document.createTextNode('jhjk k h1")
+replaceChild(para,p); new,old
+addEventListner()
+
+## javascript 3
+
+Math
+settimeout
+setinterval
+clearinterval
+functions w3school
+arrow
+
+## javascript 4
+
+classes
+oop in js
+design patterns
+addvanced js   
+js library vs framework  // library is a collection of functions and framework is a collection of classes
+
+
+cookies
+localstorage
+
+
+
